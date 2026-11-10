@@ -1,0 +1,11 @@
+import type { AnalysisRecord } from '../src/types/index'
+export const input = {targetRole:'数据分析师',targetIndustry:'互联网',targetCompanyType:'大厂',targetApplicationScenario:'日常实习',graduationStage:'大三找暑期实习',educationLevel:'本科',major:'统计',highlightAbilities:'SQL',jdText:'需要 SQL 和分析能力',resumeText:'统计本科，SQL 课程项目，分析 100 条记录。'}
+export const initial = {
+ jdAnalysis:{coreResponsibilities:['分析'],hardRequirements:['SQL'],hiddenRequirements:[],keywords:['SQL'],idealCandidate:'有证据',topFiveAbilities:['分析']},
+ resumeDiagnosis:{matchScore:60,scoreReasons:['有 SQL 课程项目依据'],dimensions:Object.fromEntries(['educationMatch','majorRelevance','internshipQuality','projectQuality','transferableExperience','skillsMatch','resultsQuantification','keywordCoverage','differentiation','credibilityRisk','priorityFixes'].map(k=>[k,'依据当前原文'])) as any,strengths:['SQL'],problems:['缺少项目指标'],priorityFixes:['补充可证明的指标']},
+ matchTable:[],followUpQuestions:[],resumeStrategy:{positioning:'分析实习',experiencesToMoveForward:[],contentToWeakenOrDelete:[],keywordsToEmbed:['SQL'],representativeProjects:[],resumeStyle:'数据型' as const},experienceTransferability:[],
+ roleFitAssessment:{fitLevel:'可尝试' as const,fitScore:65,summary:'有基础',reasons:['课程项目'],hardBlockers:[],softGaps:['缺指标'],bestEvidence:['SQL'],riskWarnings:[],recommendedAction:'补充证据'},
+ jdRequirementLevels:[],noReplyDiagnosis:{hasDeliveryContext:false,summary:'未提供',likelyReasons:[],topThreeFixes:[],nextSevenDayActionPlan:[]},skillGapPlan:{targetRole:'数据分析师',summary:'补指标',missingSkills:[],sevenDayPlan:[],thirtyDayPlan:[]}
+}
+export function record(id='a'):AnalysisRecord {return {id,createdAt:'2026-11-09T00:00:00.000Z',name:'简历',version:'V1',input:{...input},initial:structuredClone(initial),rubric:'campus-evidence-v1',model:'test-model'}}
+export const optimized = {rewriteComparison:[{before:'SQL 项目',after:'使用 SQL 分析 100 条记录',reason:'引用原文'}],finalResume:{jobIntention:'数据实习',professionalSummary:'统计本科',coreAbilities:['SQL'],workExperience:[],projectExperience:['SQL 分析 100 条记录'],skillsAndTools:['SQL'],education:'统计本科'},finalAssessment:{roleFitAssessment:initial.roleFitAssessment,matchScore:60,scoreReasons:['没有新增证据，不提高分数'],scoreChangeSummary:'保持不变'},interviewRisks:[],furtherSuggestions:{projectsToAdd:[],portfolioNeeded:false,portfolioContent:[],resumeVersions:['V2'],roleSpecificVersionsNeeded:false}}

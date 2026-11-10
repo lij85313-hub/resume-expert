@@ -1,0 +1,27 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+cost-results/
+launcher/run.log
+launcher/app.pid
+launcher/window-preview.png
+launcher/click-result.txt
+data/llm-settings.json
+
+data/*.sqlite*
+data/test-*
+playwright-report/
+test-results/
+
+tests/browser-history.png
+
+# Local personal data and runtime artifacts
+data/
+cost-dashboard/data/
+.env.*
+!.env.example
+*.log
+*.tsbuildinfo
+.claude/settings.local.json
